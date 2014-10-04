@@ -1,3 +1,9 @@
+%h4 Create a Folder
+= form_for @folder, url: {action: "create"}, html: {class: "form"} do |f|
+  = f.text_field :name
+  = f.submit "Submit", class: "btn btn-primary"
+  %br
+  
 %h4 Folders Listed Below
 
 -@folders.each do |folder|
