@@ -13,3 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+
+$('#login').click(function(){
+console.log('you clicked me!');  $('.navbar-header').removeClass('navbarHidden');
+});

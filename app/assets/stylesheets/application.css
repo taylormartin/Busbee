@@ -19,10 +19,6 @@ body {
   overflow: auto;
 }
 
- .navbarHidden {
-   opacity:0;
- }
-
  .title {
    font-family: 'Comfortaa', cursive;
    text-align: center;
