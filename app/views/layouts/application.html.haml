@@ -6,6 +6,8 @@
     = stylesheet_link_tag "//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css"
     = stylesheet_link_tag 'application', media: 'all'
 
+    = stylesheet_link_tag " href='http://fonts.googleapis.com/css?family=Dosis|Cherry+Cream+Soda|Syncopate|Tenor+Sans|Lemon|Comfortaa|Julius+Sans+One|Englebert|Gruppo' rel='stylesheet' type='text/css"
+
     = javascript_include_tag "//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
     = javascript_include_tag "//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"
     = javascript_include_tag 'application'
@@ -13,7 +15,7 @@
     = csrf_meta_tags
 
   %body
-    %nav.navbar.navbar-default
+    %nav.navbar.navbar-default.navbarHidden
       .container
         .navbar-header
           = link_to "Folders", root_path, class: "navbar-brand"
@@ -32,6 +34,9 @@
             %li= link_to "Log in", new_user_session_path
             %li= link_to "Sign up", new_user_registration_path
 
+    %h1.title
+      =image_tag  "busbee2.2.jpeg", :class => "imageClass"
+      Busbee
     .container
       .flash
         - flash.each do |name, msg|
