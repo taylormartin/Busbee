@@ -12,6 +12,7 @@ gem 'haml-rails'
 gem 'devise'
 gem 'hashie'
 gem 'sqlite3'
+gem 'aws-sdk'
 gem 'figaro'
 gem 'annotate'
 gem 'sdoc', '~> 0.4.0', group: :doc
