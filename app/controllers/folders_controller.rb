@@ -22,6 +22,7 @@ class FoldersController < ApplicationController
   def create_item
     @folder = current_user.folders.find params[:id]
     @item = @folder.items.new create_item_params
+    binding.pry
     if @item.save
       redirect_to @item, notice: "Your item was created"
     else
@@ -36,7 +37,7 @@ private
   end
 
   def create_item_params
-    params.require(:item).permit(:name)
+    params.require(:item).permit(:name, :file)
   end
 
 end

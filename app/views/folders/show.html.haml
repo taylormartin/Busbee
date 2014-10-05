@@ -1,11 +1,18 @@
 %h4 Current Folder: #{@folder.name}
 
 %h5 Add Item Below
-= form_for @item, url: {action: "create_item"}, html: {class: "form"} do |f|
+= form_for @item, url: {action: "create_item"}, html: {class: "form", multipart: true} do |f|
   = f.text_field :name
+  %br
+  %br
+  = f.file_field :file
+  %br
   = f.submit "Submit", class: "btn btn-primary"
   %br
+  %br
+  %br
 
+%h4 Folder Contents
 - @folder.items.each do |item|
   =link_to item.name, item
   %br
