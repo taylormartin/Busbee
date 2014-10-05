@@ -13,8 +13,3 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
-
-// $('.btn .btn-primary').click(function(){
-//   console.log("you clicked me!");
-//
-// });

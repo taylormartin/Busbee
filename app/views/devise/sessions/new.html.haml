@@ -12,5 +12,5 @@
     %div
       = f.check_box :remember_me
       = f.label :remember_me
-  %div#login= f.submit "Log in"
+  %div#login= f.submit "Log in", id: "submitBtn"
 = render "devise/shared/links"
