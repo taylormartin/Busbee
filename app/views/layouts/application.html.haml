@@ -13,7 +13,7 @@
     = csrf_meta_tags
 
   %body
-    %nav.navbar.navbar-default
+    %nav.navbar.navbar-default.navbarHidden
       .container
         .navbar-header
           = link_to "Home", root_path, class: "navbar-brand"
@@ -32,6 +32,11 @@
             %li= link_to "Log in", new_user_session_path
             %li= link_to "Sign up", new_user_registration_path
 
+    %h1.title
+      =image_tag  "busbee2.2.jpeg", :class => "imageClass"
+      Busbee
+      %br
+      %span.subtitle The simple, secure way to share your files
     .container
       .flash
         - flash.each do |name, msg|
